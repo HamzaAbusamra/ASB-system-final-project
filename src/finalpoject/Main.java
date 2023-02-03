@@ -1,18 +1,20 @@
-package finalpoject;
+package finalpoject;//package 
 
 import java.util.List;
 
-public class Main {
-
+public class Main { //Main class
+	
+//initialization of variables
+	
 	static final int TOTAL_TEAMS = 10;
 	static final String[] UNI_NAMES = {"HTU","AAU","AIU","AZU","AAU","ASP","PSU","JU1","UOP","YU1"};
 	static final String[] TEAMS_NAMES = {"Coder","Javag","Topg1","Eagle","C+123","Orian","Attrb","Param","Semi1","Soul1"};
-	  static final int TOTAL_QUESTIONS = 10;
-	  static final int CONTEST_DURATION = 300;
+	static final int TOTAL_QUESTIONS = 10;
+	static final int CONTEST_DURATION = 300;
 	public static void main(String[] args) {
 		ASB_System sys = new ASB_System();
 List<Teams> teams = sys.GetData(TOTAL_QUESTIONS,TOTAL_TEAMS,CONTEST_DURATION,UNI_NAMES,TEAMS_NAMES);
-
+//table layout of the records
 System.out.print("###########################################################################");
 System.out.println();
 System.out.print("#  ");

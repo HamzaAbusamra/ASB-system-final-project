@@ -1,13 +1,15 @@
-package finalpoject;
+package finalpoject;//package
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ASB_System 
+public class ASB_System //ABS_System Class
 {
+	//list function to sort all record of the teams
+	
 	public List<Teams> SetRanking(Teams[] arrayOfTeams) {
-				
+	// to be able to sort the array using collections i had to convert it to list 
 		List<Teams> sorteditems = Arrays.asList(arrayOfTeams);
 
  Collections.sort(sorteditems, (s1, s2) ->
@@ -15,7 +17,7 @@ public class ASB_System
 return sorteditems;
  }
 	
-	
+	// this function fill the array 
 	public List<Teams> GetData(int totalQuestion, int totalTeams, int Maxduration, String[] uniList, String[] teamsList) {
 		Teams arrayOfTeams[ ]= new Teams[totalTeams];
 
@@ -32,25 +34,11 @@ return sorteditems;
 		return sortedItems;
 			
 	}
-	
+	// generate a random integer to be used for the solved questions and time taken
 	public int RandomInteger(int minInteger,int maxInteger) {
 		int randomNum = ThreadLocalRandom.current().nextInt(minInteger, maxInteger);
 		return randomNum;
 			
 	}
-	public String getAlphaNumericString(int n)
-	 {
-		  String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz";
-		 
-		  StringBuilder sb = new StringBuilder(n);
-		  for (int i = 0; i < n; i++) {
-		   int index
-		    = (int)(AlphaNumericString.length()
-		      * Math.random());
-		   sb.append(AlphaNumericString
-		      .charAt(index));
-		  }
-		  return sb.toString();
-		 }
-
+	
 }

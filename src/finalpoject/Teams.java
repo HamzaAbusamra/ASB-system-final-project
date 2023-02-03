@@ -1,13 +1,16 @@
-package finalpoject;
+package finalpoject;//package
 
-public class Teams implements Comparable<Teams>{
-
-	public String uni;
-	public String[] student_name = new String [3];
-	public String team_name;
-	public int team_ID;
-	public int questions_solved;
+public class Teams implements Comparable<Teams> //Teams class
+{
+	
+//initialization of variables
+	
 	public int time_taken;
+	public String uni;
+	public int team_ID;
+	public String team_name;
+	public String[] student_name = new String [3];
+	public int questions_solved;
 	public Teams(String uni, String team_name, int team_ID, int questions_solved, int time_taken) 
 	{
 		
@@ -17,6 +20,7 @@ public class Teams implements Comparable<Teams>{
 		this.questions_solved = questions_solved;
 		this.time_taken = time_taken;
 	}
+//set and get for the variables
 	
 	public Teams() 
 	{
